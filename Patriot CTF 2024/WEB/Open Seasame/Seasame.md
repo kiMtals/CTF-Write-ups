@@ -2,6 +2,10 @@
 
 ## Исходники [server](server.py) [admink-bot](admin.py)
 
+```
+очень хороший write up(не мой) https://www.thesecuritywind.com/post/patriotctf-2024-open-seasame-web
+```
+
 #1 Reverse shell через vps
 
 ################################
